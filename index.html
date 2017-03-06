@@ -1,74 +1,7 @@
 <html>
     <head>
         <style>
-            .dot, .oval {
-                width: 50px;
-                height: 50px;
-                border-radius: 25px;
-                position: fixed;
-                top: 150px;
-                background-color: orangered;
-                transition: all 0.3s ease-in-out;
-                z-index: 2;
-            }
-            .oval {
-                transform:translateX(50%);
-                width:200px;
-                height:30px;
-                border-radius: 50px;
-                top: 250px;
-                left:40%;
-            }
-            .endme {
-                position: relative;
-                left: 30%;
-                visibility: hidden;
-                animation: meme 0.1s infinite; 
-                z-index: 3;
-            }
-            .endme p {
-               font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-               font-size: 200px; 
-            }
-            .bg {
-                animation: meme2 0.1s infinite;
-                width:100vw;
-                height:100vh;
-                z-index: 1;
-                visibility: hidden;
-                position: fixed;
-                top:0;
-            }
-            .bg img {
-                width:100vw;
-                height: 100vh;
-                position: fixed;
-                top;0;
-            }
-            @keyframes meme {
-                0% {
-                    opacity: 1;
-                    color: red;
-                }
-                50% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                    color: blue;
-                }
-            }
-            @keyframes meme2 {
-                0% {
-                    opacity: 1;
-                }
-                50% {
-                    opacity: 0;
-                }
-                100% {
-                    opacity: 1;
-                }
-            }
+            .dot,.oval{width:50px;height:50px;border-radius:25px;position:fixed;top:150px;background-color:orangered;transition:all 0.3s ease-in-out;z-index:2}.oval{transform:translateX(50%);width:200px;height:30px;border-radius:50px;top:250px;left:40%}.endme{position:relative;left:30%;visibility:hidden;animation:meme 0.1s infinite;z-index:3}.endme p{font-family:'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif;font-size:200px}.bg{animation:meme2 0.1s infinite;width:100vw;height:100vh;z-index:1;visibility:hidden;position:fixed;top:0}.bg img{width:100vw;height:100vh;position:fixed;top;0}@keyframes meme{0%{opacity:1;color:red}50%{opacity:0}100%{opacity:1;color:blue}}@keyframes meme2{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
         </style>
     </head>
     <body>
@@ -88,25 +21,9 @@
     </body>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script>
-        $(function () {
-            $(document).ready(function () {
-                $(".dot, oval").mouseenter(function (){
-                    $(".dot").css("height", "100px");
-                    $(".dot").css("width", "100px");
-                    $(".oval").css("width", "300px");
-                    $(".oval").css("left", "30%");
-                    $(".endme").css("visibility", "visible")
-                    $(".bg").css("visibility", "visible")
-                });
-                $(".dot, oval").mouseleave(function(){
-                    $(".dot").css("height", "50px");
-                    $(".dot").css("width", "50px");
-                    $(".oval").css("left", "40%");
-                    $(".endme").css("visibility", "hidden")
-                    $(".bg").css("visibility", "hidden")
-                });
-            });
-        });
+        $(function(){$(document).ready(function(){$(".dot, oval").mouseenter(function(){$(".dot").css("height","100px");$(".dot").css("width","100px");$(".oval").css("width","300px");$(".oval").css("left","30%");$(".endme").css("visibility","visible")
+$(".bg").css("visibility","visible")});$(".dot, oval").mouseleave(function(){$(".dot").css("height","50px");$(".dot").css("width","50px");$(".oval").css("left","40%");$(".endme").css("visibility","hidden")
+$(".bg").css("visibility","hidden")})})})
     </script>
 </html>
 
