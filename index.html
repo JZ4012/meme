@@ -1,7 +1,7 @@
 <html>
     <head>
         <style>
-            .dot,.oval{width:50px;height:50px;border-radius:25px;position:fixed;top:150px;background-color:orangered;transition:all 0.3s ease-in-out;z-index:2}.oval{transform:translateX(50%);width:200px;height:30px;border-radius:50px;top:250px;left:40%}.endme{position:relative;left:30%;visibility:hidden;animation:meme 0.1s infinite;z-index:3}.endme p{font-family:'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif;font-size:200px}.bg{animation:meme2 0.1s infinite;width:100vw;height:100vh;z-index:1;visibility:hidden;position:fixed;top:0}.bg img{width:100vw;height:100vh;position:fixed;top;0}@keyframes meme{0%{opacity:1;color:red}50%{opacity:0}100%{opacity:1;color:blue}}@keyframes meme2{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
+            .bg,.endme{visibility:hidden}.button,.dot,.oval{width:50px;height:50px;border-radius:25px;position:fixed;top:150px;background-color:#ff4500;transition:all .3s ease-in-out;z-index:2;cursor:pointer}.button{width:120px;padding:20px;top:60%;color:#fff;font-size:30px}.oval{transform:translateX(50%);width:200px;height:30px;border-radius:50px;top:250px;left:40%}.endme{position:relative;left:30%;animation:meme .1s infinite;z-index:3}.bg,.bg img{width:100vw;height:100vh;position:fixed}.endme p{font-family:'Trebuchet MS','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif;font-size:200px}.bg{animation:meme2 .1s infinite;z-index:1;top:0}@keyframes meme{0%{opacity:1;color:red}50%{opacity:0}100%{opacity:1;color:#00f}}@keyframes meme2{0%,100%{opacity:1}50%{opacity:0}}
         </style>
     </head>
     <body>
@@ -14,17 +14,19 @@
         <div class="endme">
             <p>KILL ME<br>KILL ME<br>KILL ME<br>KILL ME<br>KILL ME<br></p>
         </div>
-        <div class="bg">
-            <img src="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/12565445_1028210253902113_995875313042908845_n.jpg?oh=5d207b3e8b79b9cc09bb385cb27b803e&oe=5938916E"/>
+        <div class="button" id="nick" style="left:40%; background-color: blue;">
+            <p>Nik</p>
         </div>
-
+        <div class="button" id="phil" style="left:50%;">
+            <p>Fil</p>
+        </div>
+        <div class="bg">
+            <img id="imgnick" style="opacity: 1;" src="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/12565445_1028210253902113_995875313042908845_n.jpg?oh=5d207b3e8b79b9cc09bb385cb27b803e&oe=5938916E"/>
+            <img id="imgphil" style="opacity: 0;" src="https://scontent-lax3-2.xx.fbcdn.net/v/t34.0-12/14159924_1505374626155413_430867995_n.jpg?oh=6c401e7ad54ec8b96c09d2b3a1de8572&oe=58C0D7B8"/>
+        </div>
     </body>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script>
-        $(function(){$(document).ready(function(){$(".dot, oval").mouseenter(function(){$(".dot").css("height","100px");$(".dot").css("width","100px");$(".oval").css("width","300px");$(".oval").css("left","30%");$(".endme").css("visibility","visible")
-$(".bg").css("visibility","visible")});$(".dot, oval").mouseleave(function(){$(".dot").css("height","50px");$(".dot").css("width","50px");$(".oval").css("left","40%");$(".endme").css("visibility","hidden")
-$(".bg").css("visibility","hidden")})})})
+        $(function(){$(document).ready(function(){$(".dot, oval").mouseenter(function(){$(".dot").css("height","100px"),$(".dot").css("width","100px"),$(".oval").css("width","300px"),$(".oval").css("left","30%"),$(".endme").css("visibility","visible"),$(".bg").css("visibility","visible")}),$(".dot, oval").mouseleave(function(){$(".dot").css("height","50px"),$(".dot").css("width","50px"),$(".oval").css("left",""),$(".endme").css("visibility","hidden"),$(".bg").css("visibility","hidden")}),$("#nick").click(function(){$(this).css("background-color","blue"),$("#phil").css("background-color",""),$("#imgnick").css("opacity","1"),$("#imgphil").css("opacity","0")}),$("#phil").click(function(){$(this).css("background-color","blue"),$("#nick").css("background-color",""),$("#imgnick").css("opacity","0"),$("#imgphil").css("opacity","1")})})});
     </script>
 </html>
-
-
